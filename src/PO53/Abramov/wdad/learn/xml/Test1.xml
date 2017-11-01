@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<restaurant>
+    <date day="1" month="1" year="2001">
+        <order>
+            <officiant> firstname="Ivan" secondname="Ivanov" </officiant>
+            <item cost="100" name="salad"></item>
+            <item cost="50" name="tea"></item>
+            <totalcost> 150 </totalcost>
+        </order>
+    </date>
+    <date day="2" month="2" year="2002">
+        <order>
+            <officiant firstname="Petr" secondname="Petrov"></officiant>
+            <item cost="350" name="borsch"></item>
+            <item cost="50" name="tea"></item>
+            <totalcost> 400 </totalcost>
+        </order>
+    </date>
+</restaurant>
