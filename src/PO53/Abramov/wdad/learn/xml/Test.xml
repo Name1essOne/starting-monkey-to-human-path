@@ -1,0 +1,35 @@
+<?xml version="1.1" encoding="utf-8"?>
+<!DOCTYPE restaurant SYSTEM "restaurant.dtd">
+<restaurant>
+<date day="13" month="2" year="2005">
+    <order>
+        <officiant firstname="Dmitriy" secondname="Petrov"/>
+        <item cost="100" name="beer"></item>
+        <item cost="300" name="vodka"></item>
+        <item cost="200" name="sausage"></item>
+        <item cost="150" name="herring"></item>
+        <totalcost>750</totalcost>
+    </order>
+    <order>
+        <officiant firstname="Nikita" secondname="Sidorov" />
+        <item cost="777" name="borsch with cabbage, but not red"></item>
+        <item cost="100" name="sausages"></item>
+        <item cost="100" name="salad"></item>
+        <item cost="50" name="tea"></item>
+        <totalcost>1027</totalcost>
+    </order>
+</date>
+    <date day="11" month="9" year="2007">
+        <order>
+            <officiant firstname="Sergei" secondname="Ivanov"/>
+            <item cost="400" name="cocktail"></item>
+            <totalcost> 400 </totalcost>
+        </order>
+        <order>
+            <officiant firstname="Dmitriy" secondname="Petrov"/>
+            <item cost="200" name="sausages"></item>
+            <item cost="200" name="salad"></item>
+            <totalcost> 400 </totalcost>
+        </order>
+    </date>
+</restaurant>
