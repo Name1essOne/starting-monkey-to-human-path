@@ -28,16 +28,18 @@ public class PreferencesManager {
         return doc;
     }
 
-    public String getCreateregistry() {
-        return doc.getElementsByTagName("createregistry").item(0).getNodeValue();
+        public String getCreateregistry() {
+            return doc.getElementsByTagName("createregistry").item(0).getTextContent();
         }
+
+
 
         public void setCreateregistry(String createregistry) {
             doc.getElementsByTagName("createregistry").item(0).setNodeValue(createregistry);
         }
 
         public String getRegistryaddress() {
-            return doc.getElementsByTagName("registryaddress").item(0).getNodeValue();
+            return doc.getElementsByTagName("registryaddress").item(0).getTextContent();
         }
 
         public void setRegistryaddress(String registryaddress) {
@@ -53,7 +55,7 @@ public class PreferencesManager {
         }
 
         public String getPolicypath() {
-            return doc.getElementsByTagName("policypath").item(0).getNodeValue();
+            return doc.getElementsByTagName("policypath").item(0).getTextContent();
         }
 
         public void setPolicypath(String policypath) {
@@ -61,7 +63,7 @@ public class PreferencesManager {
         }
 
         public String getUsecodebaseonly() {
-            return doc.getElementsByTagName("usecodebaseonly").item(0).getNodeValue();
+            return doc.getElementsByTagName("usecodebaseonly").item(0).getTextContent();
         }
 
          public void setUsecodebaseonly(String usecodebaseonly) {
@@ -69,7 +71,7 @@ public class PreferencesManager {
         }
 
         public String getClassprovider() {
-            return doc.getElementsByTagName("classprovider").item(0).getNodeValue();
+            return doc.getElementsByTagName("classprovider").item(0).getTextContent();
         }
 
         public void setClassprovider(String classprovider) {
