@@ -45,6 +45,8 @@ public class Application {
 
         System.out.println(preferencesManager.getUsecodebaseonly());
 
+        System.out.println(xmlTask.numberOfItemsPerDay(c,"sausage"));
+
         //System.out.println(xmlTask.getDoc().getElementsByTagName("totalcost").item(0).getChildNodes().);
 
         //xmlTask.getDoc().getElementsByTagName("officiant").getLength(); кол-во эл-ов

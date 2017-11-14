@@ -8,10 +8,7 @@ import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
-import org.w3c.dom.Document;
-import org.w3c.dom.NamedNodeMap;
-import org.w3c.dom.Node;
-import org.w3c.dom.NodeList;
+import org.w3c.dom.*;
 import org.xml.sax.SAXException;
 
 
@@ -40,6 +37,31 @@ public class XmlTask  implements xml  {
 
     public Document getDoc() {
         return doc;
+    }
+
+    //возвращающий кол- во заданных блюд, которые были заказаны в заданныхй день
+    public int numberOfItemsPerDay (Calendar calendar, String nameOfItem) {
+        int day = calendar.get(calendar.DAY_OF_MONTH);
+        int month = calendar.get(calendar.MONTH);
+        int year = calendar.get(Calendar.YEAR);
+        int numOfItems = 0;
+        NodeList dates = doc.getElementsByTagName("date");
+        for (int z = 0; z < dates.getLength(); z++) {
+            Node dateNode = dates.item(z);
+            NamedNodeMap dateNodeAttributes = dateNode.getAttributes();
+            if (Integer.parseInt(dateNodeAttributes.item(0).getNodeValue()) == day &&
+                    Integer.parseInt(dateNodeAttributes.item(1).getNodeValue()) == month &&
+                    Integer.parseInt(dateNodeAttributes.item(2).getNodeValue()) == year) {
+                NodeList orders = dateNode.getChildNodes();
+                for (int j = 0; j < orders.getLength(); j++) {
+                    NodeList items = ((Element) orders.item(j)).getElementsByTagName("item");
+                    for (int k = 0; k < items.getLength(); k++) {
+                        if(items.item(k).getAttributes().getNamedItem("name").getTextContent().equals(nameOfItem)) numOfItems += 1;
+                    }
+                }
+            }
+        }
+        return numOfItems;
     }
 
     @Override
